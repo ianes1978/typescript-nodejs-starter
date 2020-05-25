@@ -5,7 +5,7 @@ const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   watch: NODE_ENV === 'development',
-  entry: './src/server.js',
+  entry: './src/server.ts',
   mode: NODE_ENV,
   target: 'node',
   externals: [nodeExternals()],
@@ -25,5 +25,12 @@ module.exports = {
       },
     ],
   },
-  plugins: [new CopyPlugin({ patterns: [{ from: './src/public', to: 'public/' }] })],
+  plugins: [
+    new CopyPlugin({
+      patterns: [
+        { from: './src/public', to: 'public/' },
+        { from: './src/views', to: 'views/' },
+      ],
+    }),
+  ],
 };
