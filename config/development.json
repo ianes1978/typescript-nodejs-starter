@@ -1,5 +1,6 @@
 {
-    "name": "My Test NodeJs/Express App - Development",
-    "mongodbConnectionString": "mongodb://localhost/",
-    "enableAccessLogs": true
+  "name": "My Test NodeJs/Express App - Development",
+  "mongodbConnectionString": "mongodb://localhost/",
+  "enableAccessLogs": true,
+  "basePath": "build/"
 }
