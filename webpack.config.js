@@ -12,7 +12,7 @@ module.exports = {
   devtool: 'inline-source-map',
   output: {
     path: path.resolve(__dirname, 'build'),
-    filename: 'index.js',
+    filename: 'server.js',
   },
   resolve: {
     extensions: ['.ts', '.js'],
