@@ -1,4 +1,4 @@
-# nodejs-starter
+# typescript-nodejs-starter
 
 Starter project NodeJS with Express/MongooseDB/Joy/Winston/Helmet/Jest
 
