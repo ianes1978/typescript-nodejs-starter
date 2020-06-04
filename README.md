@@ -11,6 +11,6 @@ Starter project NodeJS with Express/MongooseDB/Joy/Winston/Helmet/Jest. Refactor
 
 1. npm install
 2. configure mongoDB connection string in config/development "mongodbConnectionString"
-3. npm run test
-4. npm start or node app
-5. go to http://localhost:3000/
+3. npm run build
+4. npm run start:dev
+5. go to http://localhost:3000/ 
