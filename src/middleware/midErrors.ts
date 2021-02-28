@@ -1,4 +1,4 @@
-const { createLogger, transports, format } = require('winston');
+import { createLogger, transports, format } from 'winston';
 
 const transportErrors = [
     new transports.File({
@@ -16,8 +16,8 @@ const loggerError = createLogger({
     ),
     transports: transportErrors
 });
-module.exports = {
-    errorMidLogger(err, req, res, next) {
+
+   export const  errorMidLogger = (err, req, res, next)=>{
         loggerError.error(err.message, {
             date: new Date().toLocaleString(),
             statusCode: err.statusCode || "500",
@@ -27,4 +27,3 @@ module.exports = {
         res.status(err.statusCode || 500).send(err.message || err);
         next();
     }
-}

@@ -1,12 +1,12 @@
 import { router as usersRoute } from './users';
-const homeRoute = require('../routes/home');
+import {router as homeRoute} from '../routes/home';
 import { Express } from 'express';
 
-// const { errorMidLogger } = require('../middleware/midErrors');
+import  { errorMidLogger } from '../middleware/midErrors';
 
 export default function (app: Express) {
   app.use('/api/users', usersRoute);
   app.use('/', homeRoute);
 
-  //   app.use(errorMidLogger);
+  app.use(errorMidLogger);
 }

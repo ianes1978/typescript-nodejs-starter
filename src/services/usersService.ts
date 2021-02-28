@@ -1,9 +1,10 @@
 
-const dbContext = require("../store/dbContext");
+import  * as dbContext from "../store/dbContext";
 
-class UsersService {
+export class UsersService {
+
   constructor() { }
-  async getUsers () {
+  static async  getUsers() {
     return await dbContext.User.find()
       // .find({ price: { $gte: 10 } })
       // .find({ price: { $in: [10, 15, 20] } })
@@ -14,20 +15,19 @@ class UsersService {
       //.select({ name: 1, tags: 1 })
       .limit(10);
   };
-  async getUser (id) {
+  static async getUser(id) {
     return await dbContext.User.findOne({ _id: id });
   };
-  async createUser (user) {
+  static async createUser(user) {
     user.creationDate = Date.now();
     let _user = new dbContext.User(user);
     return await _user.save();
   };
-  async updateUser (id, user) {
+  static async updateUser(id, user) {
     user.modificationDate = Date.now();
     return await dbContext.User.updateOne({ _id: id }, user);
   };
-  async deleteUser (id) {
+  static async deleteUser(id) {
     return await dbContext.User.deleteOne({ _id: id });
   };
 }
-module.exports = new UsersService();

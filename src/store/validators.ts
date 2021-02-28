@@ -1,6 +1,7 @@
-const Joi = require("joi");
+// const Joi = require("joi");
+import { Joi } from 'joi'
 
-exports.validateCreateUser = function (user) {
+export const validateCreateUser =  (user)=> {
     const userValidator = {
         firstName: Joi.string().min(3).required(),
         lastName: Joi.string().min(3).required(),
@@ -9,7 +10,7 @@ exports.validateCreateUser = function (user) {
     };
     return Joi.validate(user, userValidator);
 }
-exports.validateEditUser = function (user) {
+export const validateEditUser = function (user) {
     const userValidator = {
         _id: Joi.string().length(24).required(),
         firstName: Joi.string().min(3).required(),
