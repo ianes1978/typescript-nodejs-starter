@@ -8,6 +8,7 @@ module.exports = {
   entry: './src/server.ts',
   mode: NODE_ENV,
   target: 'node',
+  externalsPresets: { node: true },
   externals: [nodeExternals()],
   devtool: 'inline-source-map',
   output: {
