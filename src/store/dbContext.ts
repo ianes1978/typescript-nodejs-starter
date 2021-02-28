@@ -1,7 +1,7 @@
 import * as mongoose from "mongoose";
-import config from '../config';
+import * as config from 'config';
 
-const connectionString = config.mongodbConnectionString || "mongodb://localhost/";
+const connectionString = config.get('mongodbConnectionString') || "mongodb://localhost/";
 console.log(connectionString);
 const dbName = 'AuthProvider';
 

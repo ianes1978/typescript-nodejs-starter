@@ -1,11 +1,12 @@
-import config from './config';
+import * as config from 'config';
 import * as express from 'express';
 import  * as path from 'path';
 import routes from './routes/index';
 import * as morgan from 'morgan';
 import * as helmet from 'helmet'; // Security
+import c = require('config');
 
-const PORT = config.port || 3000;
+const PORT = config.get('port') || 3000;
 const app = express();
 
 app.use(express.json());
@@ -13,7 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-if (config.enableAccessLogs) {
+if (config.get('enableAccessLogs')) {
   app.use(morgan('tiny'));
 }
 app.use(helmet());
