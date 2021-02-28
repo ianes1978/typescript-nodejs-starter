@@ -17,7 +17,7 @@ const loggerError = createLogger({
     transports: transportErrors
 });
 
-   export const  errorMidLogger = (err, req, res, next)=>{
+export const  errorMidLogger = (err, req, res, next)=>{
         loggerError.error(err.message, {
             date: new Date().toLocaleString(),
             statusCode: err.statusCode || "500",
