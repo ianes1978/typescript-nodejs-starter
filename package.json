@@ -23,7 +23,7 @@
     "express-async-errors": "^3.1.1",
     "helmet": "^3.21.2",
     "jest": "^26.6.3",
-    "joi": "^14.3.1",
+    "joi": "^17.4.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.11.18",
     "morgan": "^1.9.1",
