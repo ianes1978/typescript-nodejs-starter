@@ -1,6 +1,6 @@
 # typescript-nodejs-starter
 
-Starter project NodeJS with Express/MongooseDB/Joy/Winston/Helmet/Jest. Refactoring in typscript and bundled with webpack.
+Starter project NodeJS with Express/MongooseDB/Joi/Winston/Helmet/Jest. Refactoring in typscript and bundled with webpack 5.
 
 ## Install:
 
