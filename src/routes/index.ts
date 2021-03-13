@@ -4,10 +4,10 @@ import { Express } from 'express';
 
 import  { errorMidLogger } from '../middleware/midErrors';
 
-export default function(req, res, next) {
-  const app = req.app
+
+export default function (app: Express) {
   app.use('/api/users', usersRoute);
   app.use('/', homeRoute);
+
   app.use(errorMidLogger);
-  next();
-};
+}

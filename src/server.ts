@@ -21,7 +21,7 @@ app.use(helmet());
 
 app.use(express.static('public'));
 
-app.use(routes);
+routes(app);
 
 app.listen(PORT, () => {
   console.log('server started at http://localhost:' + PORT);
