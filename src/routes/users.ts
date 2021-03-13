@@ -55,4 +55,4 @@ router.delete('/:id', authentication(), authorization([ADMIN]), async (req, res)
   res.send(responseDelete);
 });
 
-export { router };
+export default  router ;

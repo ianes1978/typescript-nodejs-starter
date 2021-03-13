@@ -23,4 +23,4 @@ router.get('/',  (req, res) => {
 
   res.render('home', viewModel);
 });
-export { router };
+export default router ;
