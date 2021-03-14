@@ -4,7 +4,7 @@
   "description": "",
   "repository": {
     "type": "git",
-    "url": "git://github.com/LeonardoMattevi/nodejs-starter.git"
+    "url": "git://github.com/ianes1978/typescript-nodejs-starter.git"
   },
   "main": "build/server.js",
   "scripts": {
